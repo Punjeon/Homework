@@ -197,6 +197,11 @@ li {
     gap: 5px;
 }
 
+.card__first:hover {
+ background-color: white;
+ border: 5px solid #18B5DC
+}
+
 .card__first-img{
     width: 42px;
     height: 42px;
