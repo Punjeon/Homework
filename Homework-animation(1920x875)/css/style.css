@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    color: white
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 20px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.header__text {
+    max-width: 380px;
+    margin: 16px 0 24px;
+}
+
+.header__planet {
+    width: 1000px;
+    position: absolute;
+    bottom: -90px;
+    right: -110px;
+
+    animation: planet 6s infinite;
+    z-index: 2;
+
+    /* transform: translate(33px, -50px); */
+}
+
+.header__cursor {
+    width: 200px;
+    position: absolute;
+    bottom: 200px;
+    right: 340px;
+
+    animation: cursor 6s infinite ease-in;
+    z-index: 3;
+}
+
+.header__thing {
+    width: 200px;
+    position: absolute;
+}
+
+.first-thing {
+    top: 160px;
+
+    left: 880px;
+    animation: first-thing 4s infinite ease-in;
+}
+
+.second-thing {
+    top: 360px;
+
+    left: 1080px;
+    z-index: 0;
+    animation: second-thing 4s infinite ease-in;
+
+}
+
+.third-thing {
+    top: 660px;
+
+    left: 980px;
+    animation: third-thing 4s infinite ease-in;
+}
+
+.header__button {
+    padding: 20px;
+    background-color: blue;
+}
+
+.header__button:hover {
+    animation: color 1s forwards infinite;
+}
+
+/* Робив на 1920 х 875  */
+.headeer__loading {
+    display:flex;
+    gap: 100px;
+    margin-top:50px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Робив на 1920 х 875  */
+.header__ball {
+    width: 40px;
+    height: 40px;
+
+    background: #ED1F1F;
+    border-radius: 50%;
+    
+    animation: first-ball 2s infinite ease-in;
+}
+
+
+.header__ball:nth-child(1) {
+    animation-delay: 1s;
+}
+
+
+
+.header__ball:nth-child(2) {
+    animation-delay: 1.5s;
+}
+
+.header__ball:nth-child(3) {
+    animation-delay: 2s;
+}
+
+
+@keyframes first-ball {
+    0% {
+        transform: translate(0, 0);
+        width: 40px;
+        height: 40px;
+    }
+
+    50% {
+        transform: translate(0, 40px);
+        width: 60px;
+        height: 60px;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+@keyframes first-thing {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes second-thing {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(75px, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes third-thing {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, 180px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes planet {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(23px, -30px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes cursor {
+    0% {
+        width: 100px;
+    }
+
+    50% {
+        width: 200px;
+    }
+
+    100% {
+        width: 100px;
+    }
+}
+
+@keyframes color {
+    from {
+        background-color: blue;
+        color: white;
+    }
+
+    50% {
+        background-color: red;
+        color: yellow;
+    }
+
+    to {
+        background-color: blue;
+        color: white
+    }
+}
