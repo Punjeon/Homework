@@ -63,7 +63,7 @@ li {
     color: lightblue
 }
 
-.section_svg:hover {
+.header__box:hover .section_svg {
     color: fuchsia;
 }
 
