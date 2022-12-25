@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <h4>Запитай у користувача радіус кола і виведи площу такої окружності.</h4>
+        <input type="number" class="num1" placeholder="Радіус кола">
+        <button class="btn1">Send</button>
+        <p>
+            Площа:
+            <span class="out1"></span>
+        </p>
+    </section>
+
+
+
+    <script>
+        //1
+        let num1 = document.querySelector('.num1');
+        let btn1 = document.querySelector('.btn1');
+        let out1 = document.querySelector('.out1');
+
+        btn1.onclick = () => {
+            out1.innerHTML = num1.value * num1.value * Math.PI;
+        }
+
+    </script>
+</body>
+
+</html>
