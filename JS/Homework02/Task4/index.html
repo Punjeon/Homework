@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <h4>Користувач вводить суму грошей в гаманці і ціну однієї шоколадки. Програма виводить скільки шоколадок може купити користувач і скільки здачі у нього залишиться.</h4>
+        <input type="number" class="num1" placeholder="Гроші">
+        <input type="number" class="num2" placeholder="Ціна шоколадки">
+        <button class="btn1">Send</button>
+        <p>
+            Кількість шоколадок:
+            <span class="out1"></span><br>
+            Решта:
+            <span class="out2"></span>
+        </p>
+    </section>
+
+
+
+    <script>
+        //1
+        let num1 = document.querySelector('.num1');
+        let num2 = document.querySelector('.num2');
+        let btn1 = document.querySelector('.btn1');
+        let out1 = document.querySelector('.out1');
+        let out2 = document.querySelector('.out2');
+
+        
+
+        btn1.onclick = () => {
+
+            let kilk = Math.floor(+num1.value / +num2.value);
+            out1.innerHTML = kilk;
+
+            let res = +num1.value - (kilk * num2.value);
+            out2.innerHTML = res;
+        }
+
+    </script>
+</body>
+
+</html>

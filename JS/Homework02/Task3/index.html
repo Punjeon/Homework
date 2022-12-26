@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <section>
+        <h4>Користувач вказує обсяг флешки в Гб. Програма повинна порахувати скільки файлів розміром в 820 Мб поміщається на флешку.</h4>
+        <input type="number" class="num1" placeholder="обсяг флешки в Гб">
+        <button class="btn1">Send</button>
+        <p>
+            Кількість файлів розміром в 820 Мб:
+            <span class="out1"></span> <br>
+            Вільного місця:
+            <span class="out2"></span> <br>
+        </p>
+    </section>
+
+
+
+    <script>
+        //1
+        let num1 = document.querySelector('.num1');
+        const file = 820;
+        let btn1 = document.querySelector('.btn1');
+        let out1 = document.querySelector('.out1');
+        let out2 = document.querySelector('.out2');
+
+        btn1.onclick = () => {
+            out1.innerHTML = Math.floor(num1.value * 1000 / (file));
+            out2.innerHTML = (num1.value * 1000) % 820;
+        }
+
+    </script>
+</body>
+
+</html>
